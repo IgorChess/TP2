@@ -304,6 +304,10 @@ void SignContainer::PrintWithZodiac(int zodiac) const
    {
 	  if (currentSign->GetZodiac() != zodiac)
 	  {
+		 if (i < length - 1)
+		 {
+			 currentSign = currentSign->GetNextSign();
+		 }
 		 continue;
 	  }
 	  std::cout << *currentSign;
